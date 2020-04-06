@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <div>
+        <c:PaanShopObjectListCmp aura:id="transactionListID" objectName="PaanShopTransaction__c" objType="null" />
+    </div>
+
+</aura:component>

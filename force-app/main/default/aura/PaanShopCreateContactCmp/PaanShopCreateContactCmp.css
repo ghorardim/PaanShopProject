@@ -1,0 +1,13 @@
+.THIS {
+    background: whitesmoke;
+}
+
+.THIS .MainBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.THIS .MainBody .Btn {
+    width: 100%;
+}

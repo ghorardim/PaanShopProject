@@ -1,0 +1,4 @@
+<aura:component>
+    <c:PaanShopCreateRecordCmp />
+    <c:PaanShopPaanBuyerListCmp />
+</aura:component>

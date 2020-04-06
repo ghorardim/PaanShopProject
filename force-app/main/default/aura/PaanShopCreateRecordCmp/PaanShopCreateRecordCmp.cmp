@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" >
+  <!-- attributes -->
+  <aura:attribute name="isOpen" type="Boolean" default="false"/>
+  <aura:attribute name="fields" type="String[]"/>
+  <aura:attribute name="objApiName" type="String"/>
+
+  <!-- handler -->
+  <aura:handler event="c:PaanShopEventCreateRecord" action="{!c.handleCreateRecordEvent}" />
+
+  <h1>Hellow world</h1>
+  <h1>{!v.objApiName}</h1>
+  
+</aura:component>	

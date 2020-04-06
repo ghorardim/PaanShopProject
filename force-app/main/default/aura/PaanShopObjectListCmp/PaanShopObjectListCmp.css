@@ -1,0 +1,220 @@
+.THIS {
+    background-color: white;
+    height: 500px;
+}
+
+.THIS .BlankArea {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+.THIS .TableBase {
+    position: relative;
+    height: auto;
+    width: 96%;
+    top: 30px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.THIS .RectangleHead {
+    position: relative;
+    height: 60px;
+    border: 1px solid rgb(133, 148, 158);
+    border-left: 5px solid rgba(2, 0, 68);
+}
+
+.THIS .RectangleHead .Icon {
+    position: absolute;
+    width: 26px;
+    height: 25px;
+    left: 34px;
+    top: 15px;
+
+    background: url('/resource/PracticeTableHeadIcon?');
+}
+
+.THIS .TableTitle {
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    /* left: 10.69%;
+    right: 60.4%; */
+    top: 22px;
+
+    font-family: Noto Sans CJK JP;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.08em;
+
+    color: #020044;
+}
+
+.THIS .TableArea {
+    position: relative;
+    height: 400px;
+    border: 1px solid rgb(238, 228, 228);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0px;
+    padding-bottom: 7px;
+    overflow: auto;
+}
+
+.THIS .TableArea .table-1 {
+    position: relative;
+    table-layout: fixed;
+    height: auto;
+    width: 100%;
+    border-spacing: 0px 1px;
+    border-collapse: separate;
+    /* max-height: 450px; */
+}
+
+.THIS .TableArea .table-1 thead tr th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.THIS .TableArea .table-1 th {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    bottom: 3px;
+}
+
+.THIS .TableArea .table-1 th .Item {
+    height: 100%;
+    width: 99.70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 10px;
+    /* letter-spacing: 0.02em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(115, 111, 150);
+}
+
+.THIS .TableArea .table-1 td {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(2, 0, 68, 0.03);
+    /* padding-top: 17px; */
+    /* padding-bottom: 10px;*/
+}
+
+.THIS .TableArea .table-1 td .Item {
+    height: 100%;
+    width: 100%;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 10px;
+    /* letter-spacing: .02em; */
+    /* background-color: rgba(2, 0, 68, 0.03); */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    vertical-align: -webkit-baseline-middle;
+    margin-top: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.THIS .textBar {
+    position: absolute;
+    border-left: 2px solid #d6d6da;
+    height: 50%;
+    top: 25%;
+    bottom: 25%;
+}
+
+.THIS .TableHead {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.THIS .TableHead .Data {
+    height: 30px;
+    width: 99.70%;
+
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-left: .02px solid white;
+    border-right: .01px solid white;
+
+    background-color: rgba(44, 43, 55, 0.1);
+}
+
+.THIS .TableBody {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.THIS .TableBody .SingleElement {
+    position: relative;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    min-width: 0;
+    background-color: rgba(2, 0, 68, 0.03);
+}
+
+.THIS .TableBody .SingleElement .Data {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: .02em;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: rgba(2, 0, 68, 0.03); */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 7px;
+}
+
+.THIS .dataBar {
+    position: absolute;
+    border-left: 2px solid #d6d6da;
+    height: 50%;
+    top: 25%;
+    bottom: 25%;
+}

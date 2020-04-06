@@ -1,0 +1,13 @@
+<aura:component  implements="flexipage:availableForAllPageTypes">
+    <!-- handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.sendObjectAndField}" />
+    <!-- Attribute -->
+    <aura:attribute name="objectAndField" type="String[]" default="['PaanShopContact__c','Name','PhoneNumber__c','Type__c','AdvancePayment__c','BeLelfPayment__c','Contact_Get_Money__c']" />
+
+    <!-- event -->
+    <aura:registerEvent name="eventObjField" type="c:PaanShopEventCreateRecord" />
+    <div>
+        <c:PaanShopObjectListCmp aura:id="buyerListID" objectName="PaanShopContact__c" objType="Buyer"/>
+    </div>
+
+</aura:component>	

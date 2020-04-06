@@ -1,0 +1,44 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <!-- attributes -->
+
+    <aura:attribute name="fields" type="String[]"
+        default="['Name','PhoneNumber__c','Type__c','AdvancePayment__c','BeLelfPayment__c','Contact_Get_Money__c']" />
+    <aura:attribute name="isOpen" type="Boolean" default="false" />
+
+    <aura:attribute name="objApiName" type="String" default="PaanShopContact__c" />
+
+    <!-- handler -->
+    <aura:handler event="c:PaanShopEventCreateRecord" action="{!c.handleCreateRecordEvent}" />
+
+    <div>
+
+        <div class="MainBody">
+            <lightning:button variant="brand" label=" Create New Client " title="Click to Create new contact"
+                onclick="{! c.handleClick }"  class="Btn"/>
+
+            <aura:if isTrue="{!v.isOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close" onclick="{! c.closeModal}">
+                                <!-- <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg> -->
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Create New Contact</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <lightning:recordForm objectApiName="{!v.objApiName}" fields="{!v.fields}"
+                                onsuccess="{!c.handleSuccess}" oncancel="{!c.onCancel}" />
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </aura:if>
+        </div>
+    </div>
+
+</aura:component>

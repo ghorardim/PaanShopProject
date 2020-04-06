@@ -1,0 +1,56 @@
+<aura:component controller="PaanShopApexController" implements="flexipage:availableForRecordHome">
+    <!-- Attribute -->
+    <aura:attribute name="rawMaterialList" type="PaanShopRawMaterial__c[]" />
+    <aura:attribute name="rawMaterialSelectedName" type="String" />
+    <aura:attribute name="Quantity" type="String" default="0" />
+    <aura:attribute name="PayCash" type="String" default="0" />
+    <aura:attribute name="AdvancePayment" type="String"  default="0"/>
+    <aura:attribute name="PartyGetMoney" type="String"  default="0"/>
+    <aura:attribute name="Phone" type="String" />
+    <aura:attribute name="ContactName" type="String" default="?" />
+    <aura:attribute name="contactObj" type="PaanShopContact__c" default="null" />
+    <aura:attribute name="Remark" type="String" default="" />
+    <aura:attribute name="contactType" type="String" default="Seller" />
+    <aura:attribute name="transactionType" type="String" default="Buy" />
+    <aura:attribute name="productType" type="String" default="PaanShopRawMaterial" />
+    <aura:attribute name="selectProductID" type="String"/>
+    
+
+    <!-- handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.showRawMaterialList}" />
+    <!-- Body -->
+    <div>
+        <div class="MainBody">
+            <lightning:select name="select" aura:id='select' onchange="{!c.changeItem}" class=""
+                label="Select Raw Material: ">
+                <aura:iteration items="{!v.rawMaterialList}" var="item">
+                    <option value="{!item.Id}">{!item.Raw_Material_Name__c}</option>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:input aura:id="quantityID" name="Quantity" value="{!v.Quantity}" label="Quantity:" />
+            <lightning:input aura:id="paycashID" name="PayCash" value="{!v.PayCash}" label="Pay Cash:" />
+            <lightning:input aura:id="advancePaymentID" name="AdvancePayment" value="{!v.AdvancePayment}"
+                label="Advance Payment: " />
+            <lightning:input aura:id="partyGetMoneyID" name="PartyGetMoney" value="{!v.PartyGetMoney}"
+                label="Party Get Money: " />
+            <div class="SearchContact">
+                <lightning:input aura:id="phoneID" name="Phone" value="{!v.Phone}" label="Contact Number: " />
+                <lightning:button variant="base" label="Find Contact" title="Find Dealer Name"
+                    onclick="{! c.doSearchContact }" />
+            </div>
+            <aura:if isTrue="{!v.ContactName != '?'}">
+                <div class="Contact">
+                    <lightning:input aura:id="contactID" name="ContactName" value="{!v.ContactName}"
+                        label="Contact Name: "  disabled="false"/>
+                    <aura:if isTrue="{!v.contactObj == null}">
+                        <lightning:button variant="base" label="Make This New Contact" title="Create New Contact" onclick="{!c.makeNewContact}"/>
+                    </aura:if>
+                </div>
+            </aura:if>
+            <lightning:textarea name="Remark" label="Remark: " value="{!v.Remark}" />
+            <aura:if isTrue="{!v.contactObj != null}">
+                <lightning:button variant="success" label="Done" title="Buy Raw Material" onclick="{! c.buyRawMaterial }" />
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

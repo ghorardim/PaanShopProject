@@ -1,0 +1,21 @@
+.THIS {
+    background: white;
+}
+
+.THIS .MainBody .SearchContact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.THIS .MainBody .Contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.THIS .MainBody .PaanAndPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

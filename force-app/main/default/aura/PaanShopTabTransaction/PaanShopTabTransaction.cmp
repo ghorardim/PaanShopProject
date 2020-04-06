@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <div class="MainBody">
+        <lightning:tabset selectedTabId="one">
+            <lightning:tab label="Sell Paan" id="one">
+                <c:PaanShopSellPaan />
+            </lightning:tab>
+            <lightning:tab label="Buy Raw Material" id="two">
+                <c:PaanShopBuyRawMaterial />
+            </lightning:tab>
+        </lightning:tabset>
+    </div>
+
+</aura:component>

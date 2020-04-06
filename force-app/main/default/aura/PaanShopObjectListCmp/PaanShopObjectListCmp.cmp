@@ -1,0 +1,84 @@
+<aura:component controller="PaanShopApexControllerObjectList">
+    <ltng:require styles="/resource/DefaultHeaderRemove" />
+    <!-- attribute -->
+    <aura:attribute name="dataList" type="sObject[]" />
+    <aura:attribute name="objectName" type="String" />
+    <aura:attribute name="objType" type="String" default="null" />
+    <aura:attribute name="tableTitle" type="string" />
+    <aura:attribute name="tableHead" type="List" />
+    <aura:attribute name="tableData" type="List[]" />
+    <aura:attribute name="emptyTableData" type="String" />
+    <aura:attribute name="tableItemWidth" type="String" />
+    <aura:attribute name="recordIDList" type="List[]" />
+
+    <!-- handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.showDataList}" />
+
+
+    <!-- navigation -->
+    <lightning:navigation aura:id="navId" />
+
+    <div>
+        <!-- Table body -->
+
+        <div class="TableBase">
+            <div class="RectangleHead">
+                <div class="Icon"></div>
+                <div class="TableTitle">{!v.tableTitle}</div>
+            </div>
+            <div class="TableArea">
+                <table class="table-1">
+                    <thead>
+                        <tr>
+                            <aura:iteration items="{!v.tableHead}" var="item">
+                                <th scope="col">
+                                    <div class="Item">
+                                        {!item}
+                                    </div>
+                                </th>
+                            </aura:iteration>
+                            <th scope="col">
+                                <div class="Item">
+                                    View
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.tableData}" var="rowData" indexVar="idx">
+                            <tr>
+                                <aura:iteration items="{!rowData}" var="item" indexVar="index">
+                                    <td>
+                                        <aura:if isTrue="{!index == 0}">
+                                            <div class="Item">
+                                                {!item}
+                                            </div>
+                                            <aura:set attribute="else">
+                                                <div class="textBar">
+                                                </div>
+                                                <div class="Item">
+                                                    {!item}
+                                                </div>
+                                            </aura:set>
+                                        </aura:if>
+                                    </td>
+                                </aura:iteration>
+                                <td>
+                                    <div class="textBar">
+                                    </div>
+                                    <div class="Item">
+                                        <lightning:button variant="brand-outline" label="View Details" value="{!idx}"
+                                            title="Click to view details" onclick="{! c.handleClick }" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+                <h3>{!v.emptyTableData}</h3>
+            </div>
+        </div>
+        <!-- Table body  End -->
+    </div>
+
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <div>
+        <c:PaanShopObjectListCmp aura:id="rawMaterialListID" objectName="PaanShopRawMaterial__c" objType="null" />
+    </div>
+</aura:component>
