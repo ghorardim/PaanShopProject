@@ -1,2 +1,7 @@
 .THIS {
+    background: transparent;
+}
+
+.THIS .LeftPart {
+    padding-top: 1%;
 }

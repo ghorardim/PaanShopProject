@@ -1,6 +1,7 @@
 .THIS {
     background-color: white;
     height: 500px;
+    border-radius: 5px;
 }
 
 .THIS .BlankArea {
@@ -107,6 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     background-color: rgb(115, 111, 150);
 }
@@ -137,9 +139,15 @@
     text-align: center;
     vertical-align: -webkit-baseline-middle;
     margin-top: 9px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.THIS .TableArea .table-1 td .Item .View {
+    line-height: normal;
+    padding: 5%;
 }
 
 .THIS .textBar {

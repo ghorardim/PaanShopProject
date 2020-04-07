@@ -68,7 +68,7 @@
                                     </div>
                                     <div class="Item">
                                         <lightning:button variant="brand-outline" label="View Details" value="{!idx}"
-                                            title="Click to view details" onclick="{! c.handleClick }" />
+                                            title="Click to view details" onclick="{! c.handleClick }"  class="View"/>
                                     </div>
                                 </td>
                             </tr>

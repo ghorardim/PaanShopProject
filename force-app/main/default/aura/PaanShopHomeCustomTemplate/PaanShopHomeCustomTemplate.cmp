@@ -18,7 +18,7 @@
         <!-- Row 2 -->
         <lightning:layout>
 
-            <lightning:layoutItem size="{! $Browser.isDesktop ? '7' : '12' }" class="">
+            <lightning:layoutItem size="{! $Browser.isDesktop ? '7' : '12' }" class="LeftPart">
                 {!v.left_col}
             </lightning:layoutItem>
 
